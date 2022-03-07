@@ -4,7 +4,6 @@ export const Image = styled.img`
   ${(props) =>
     props.colority &&
     `
-  -webkit-filter: grayscale(${props.colority}%);
   filter: grayscale(${props.colority}%);
 `}
   ${(props) =>
@@ -12,4 +11,9 @@ export const Image = styled.img`
     `
     transform: rotate(${props.rotation}deg);
 `}
+    ${(props) =>
+    props.opacity &&
+    `
+    opacity: ${props.opacity}
+`};
 `;
