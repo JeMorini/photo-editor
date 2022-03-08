@@ -28,7 +28,7 @@ function BlockEditImage() {
       .catch(function (error) {
         console.error("oops, something went wrong!", error);
       });
-  }, [coloring, rotation, opacity]);
+  }, [coloring, rotation, opacity, blur]);
   return (
     <Container type="row">
       <TabItems setItemSelected={setItemSelected} itemSelected={itemSelected} />
