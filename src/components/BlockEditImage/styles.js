@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Image = styled.img`
   ${(props) =>
-    props.colority &&
     `
-  filter: grayscale(${props.colority}%);
+  filter: grayscale(${props.colority}%) blur(${props.blur}px);
 `};
   ${(props) =>
     props.rotation &&
@@ -16,7 +15,7 @@ export const Image = styled.img`
     `
     opacity: ${props.opacity}
 `};
-  height: 45%;
+  height: 14rem;
 `;
 
 export const Container = styled.div`
@@ -35,4 +34,14 @@ export const ContainerImage = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+`;
+
+export const InputImage = styled.label`
+  cursor: pointer;
+`;
+
+export const TitleInputImage = styled.p`
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
 `;

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Container, Items } from "./styles";
+import { AiOutlineBgColors, AiOutlineSync } from "react-icons/ai";
+import { BsFillBrightnessHighFill } from "react-icons/bs";
+import { MdOutlineLensBlur } from "react-icons/md";
 
 function TabItems({ setItemSelected, itemSelected }) {
   return (
@@ -8,19 +11,25 @@ function TabItems({ setItemSelected, itemSelected }) {
         onClick={() => setItemSelected("Coloring")}
         selected={itemSelected === "Coloring"}
       >
-        <p>Co</p>
+        <AiOutlineBgColors size={50} />
       </Items>
       <Items
         onClick={() => setItemSelected("Rotation")}
         selected={itemSelected === "Rotation"}
       >
-        <p>Ro</p>
+        <AiOutlineSync size={50} />
       </Items>
       <Items
         onClick={() => setItemSelected("Opacity")}
         selected={itemSelected === "Opacity"}
       >
-        <p>Op</p>
+        <BsFillBrightnessHighFill size={50} />
+      </Items>
+      <Items
+        onClick={() => setItemSelected("Blur")}
+        selected={itemSelected === "Blur"}
+      >
+        <MdOutlineLensBlur size={50} />
       </Items>
     </Container>
   );

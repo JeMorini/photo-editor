@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, Items, Input, Button, LinkDownload } from "./styles";
+import { AiOutlineDownload } from "react-icons/ai";
 
-function ItemSelector({
+function BottomBar({
   coloring,
   rotation,
   opacity,
+  blur,
   setColoring,
   setRotation,
   setOpacity,
+  setBlur,
   imageChanged,
   itemSelected,
 }) {
@@ -30,6 +33,7 @@ function ItemSelector({
             type="range"
             min="0"
             max="180"
+            step="180"
             value={rotation}
             onChange={(value) => setRotation(value.target.value)}
           />
@@ -46,12 +50,26 @@ function ItemSelector({
           />
         )}
 
+        {itemSelected === "Blur" && (
+          <Input
+            type="range"
+            min="0"
+            max="10"
+            step="0.01"
+            value={blur}
+            onChange={(value) => setBlur(value.target.value)}
+          />
+        )}
+
         <LinkDownload href={imageChanged} download>
-          <Button>Download</Button>
+          <Button>
+            <AiOutlineDownload size={30} />
+            Download
+          </Button>
         </LinkDownload>
       </Items>
     </Container>
   );
 }
 
-export default ItemSelector;
+export default BottomBar;

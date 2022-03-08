@@ -21,6 +21,7 @@ export const Items = styled.div`
 
 export const Input = styled.input`
   width: 20rem;
+  accent-color: #6d165a;
 `;
 
 export const Button = styled.div`
@@ -31,7 +32,7 @@ export const Button = styled.div`
   cursor: pointer;
   border-radius: 4px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 `;
 
 export const LinkDownload = styled.a`
