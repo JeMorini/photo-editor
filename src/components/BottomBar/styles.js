@@ -28,6 +28,7 @@ export const Button = styled.div`
   display: flex;
   width: 10rem;
   height: 2.5rem;
+  padding: 0.2rem;
   background-color: #6d165a;
   cursor: pointer;
   border-radius: 4px;
